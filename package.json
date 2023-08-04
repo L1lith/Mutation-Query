@@ -1,28 +1,44 @@
 {
-  "name": "mutation-query",
-  "version": "0.0.1",
-  "description": "Mutation Observers made easy with CSS queries",
-  "main": "index.js",
-  "homepage": "https://github.com/L1lith/Mutation-Query#readme",
-  "bugs": {
-    "url": "https://github.com/L1lith/Mutation-Query/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/L1lith/Mutation-Query.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "mutation",
-    "observers",
-    "css",
-    "queries",
-    "query",
-    "observer",
-    "easy"
-  ],
-  "author": "L1lith",
-  "license": "SEE LICENSE IN LICENSE.md"
+    "name": "mutation-query",
+    "version": "0.0.1",
+    "description": "Mutation Observers made easy with CSS queries",
+    "type": "module",
+    "source": "source/index.js",
+    "exports": {
+        "require": "./dist/mutation-query.cjs",
+        "default": "./dist/mutation-query.modern.js"
+    },
+    "main": "./dist/mutation-query.cjs",
+    "module": "./dist/mutation-query.module.js",
+    "unpkg": "./dist/mutation-query.umd.js",
+    "scripts": {
+        "build": "microbundle",
+        "dev": "microbundle watch"
+    },
+    "homepage": "https://github.com/L1lith/Mutation-Query#readme",
+    "bugs": {
+        "url": "https://github.com/L1lith/Mutation-Query/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/L1lith/Mutation-Query.git"
+    },
+    "keywords": [
+        "mutation",
+        "observers",
+        "css",
+        "queries",
+        "query",
+        "observer",
+        "easy"
+    ],
+    "author": "L1lith",
+    "license": "SEE LICENSE IN LICENSE.md",
+    "devDependencies": {
+        "microbundle": "^0.15.1"
+    },
+    "dependencies": {
+        "auto-bind": "^5.0.1",
+        "css-selector-parser": "^2.3.2"
+    }
 }
